@@ -11,10 +11,11 @@ class ApartmentsScreen extends StatefulWidget {
 int selectedIndex = 0;
 
 final List<String> images = [
-  'images/home.jpeg',
   'images/home1.jpeg',
   'images/home2.jpeg',
   'images/home3.jpeg',
+  'images/home4.jpeg',
+  'images/home5.jpeg',
 ];
 
 class _ApartmentsScreenState extends State<ApartmentsScreen> {
