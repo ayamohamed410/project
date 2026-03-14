@@ -1,4 +1,6 @@
+import 'package:agin_3/view/screen/login.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomButtonOnBoarding extends StatelessWidget {
   const CustomButtonOnBoarding({super.key});
@@ -8,7 +10,9 @@ class CustomButtonOnBoarding extends StatelessWidget {
     return Container(
       height: 40,
       child: OutlinedButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.to(() => const LoginScreen());
+        },
         style: OutlinedButton.styleFrom(
           padding: EdgeInsets.symmetric(horizontal: 100, vertical: 4),
           shape: RoundedRectangleBorder(
