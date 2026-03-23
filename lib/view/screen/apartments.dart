@@ -1,4 +1,4 @@
-import 'package:agin_3/view/card/card.dart';
+import 'package:agin_3/controller/controlleBetweenPages.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -53,7 +53,7 @@ class _ApartmentsScreenState extends State<ApartmentsScreen> {
                 padding: EdgeInsets.all(20),
                 height: 280,
                 width: double.infinity,
-                margin: const EdgeInsets.symmetric(horizontal: 2),
+                margin: const EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
@@ -98,6 +98,7 @@ class _ApartmentsScreenState extends State<ApartmentsScreen> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 10),
                   Row(
                     children: [
                       Icon(
@@ -115,6 +116,52 @@ class _ApartmentsScreenState extends State<ApartmentsScreen> {
                     ],
                   ),
                   //****************** */
+                  SizedBox(height: 10),
+
+                  //Controll for pages
+                  //######################  Controllebetweenpages(),
+                  //
+                  SizedBox(height: 10),
+                  Center(
+                    child: SizedBox(
+                      width: 350,
+                      child: ListTile(
+                        tileColor: Color(0xffCFD7DA),
+                        title: Text(
+                          "EGP 4,500",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.5,
+                          ),
+                        ),
+                        subtitle: Text(
+                          "In month",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.5,
+                          ),
+                        ),
+                        trailing: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xff53617F),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            minimumSize: Size(17, 42),
+                          ),
+                          onPressed: () {},
+
+                          child: Text(
+                            "Check Now",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                   SizedBox(height: 6),
 
                   Text(
