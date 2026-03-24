@@ -11,4 +11,5 @@ class OnBoardingControllerImp extends OnBoardingController {
     currentPage = index;
     update();
   }
+  
 }
