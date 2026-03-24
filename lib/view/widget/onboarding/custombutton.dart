@@ -1,3 +1,5 @@
+import 'package:agin_3/view/screen/home/home.dart';
+import 'package:agin_3/view/screen/home/navigation.dart';
 import 'package:flutter/material.dart';
 
 class CustomButtonOnBoarding extends StatelessWidget {
@@ -8,7 +10,9 @@ class CustomButtonOnBoarding extends StatelessWidget {
     return Container(
       height: 40,
       child: OutlinedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Navigation.routeName);
+        },
         style: OutlinedButton.styleFrom(
           padding: EdgeInsets.symmetric(horizontal: 100, vertical: 4),
           shape: RoundedRectangleBorder(
