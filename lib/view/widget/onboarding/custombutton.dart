@@ -9,6 +9,7 @@ class CustomButtonOnBoarding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
+      
       child: OutlinedButton(
         onPressed: () {
           Get.to(() => const LoginScreen());

@@ -1,4 +1,4 @@
-import 'package:agin_3/controller/controlleBetweenPages.dart';
+import 'package:agin_3/controller/controlleBetweentabs.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -119,55 +119,11 @@ class _ApartmentsScreenState extends State<ApartmentsScreen> {
                   SizedBox(height: 10),
 
                   //Controll for pages
-                  //######################  Controllebetweenpages(),
+                  ControllebetweenTabs(),
+
                   //
-                  SizedBox(height: 10),
-                  Center(
-                    child: SizedBox(
-                      width: 350,
-                      child: ListTile(
-                        tileColor: Color(0xffCFD7DA),
-                        title: Text(
-                          "EGP 4,500",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.5,
-                          ),
-                        ),
-                        subtitle: Text(
-                          "In month",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16.5,
-                          ),
-                        ),
-                        trailing: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xff53617F),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            minimumSize: Size(17, 42),
-                          ),
-                          onPressed: () {},
-
-                          child: Text(
-                            "Check Now",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 6),
-
-                  Text(
-                    "Location",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                  ),
+                  // SizedBox(height: 5),
+                  //++
                 ],
               ),
 

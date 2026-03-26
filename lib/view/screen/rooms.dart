@@ -25,10 +25,8 @@ class _RoomsState extends State<Rooms> {
                 ),
                 children: [
                   //الكارد
-                  CardComponent(title: "Single", titleNum: "1"),
-                  CardComponent(title: "Double", titleNum: "2"),
-                  CardComponent(title: "Triple", titleNum: "3"),
-                  CardComponent(title: "Room3", titleNum: "4"),
+                 // CardComponent(title: "Single", titleNum: "1"),
+                
                 ],
               );
   }
