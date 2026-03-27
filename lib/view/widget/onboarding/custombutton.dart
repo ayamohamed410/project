@@ -1,6 +1,8 @@
-import 'package:agin_3/view/screen/home/home.dart';
-import 'package:agin_3/view/screen/home/navigation.dart';
+// import 'package:agin_3/view/screen/home/home.dart';
+// import 'package:agin_3/view/screen/home/navigation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:agin_3/view/screen/login.dart';
 
 class CustomButtonOnBoarding extends StatelessWidget {
   const CustomButtonOnBoarding({super.key});
@@ -12,7 +14,7 @@ class CustomButtonOnBoarding extends StatelessWidget {
       
       child: OutlinedButton(
         onPressed: () {
-          Navigator.pushNamed(context, Navigation.routeName);
+          Get.to(() => const LoginScreen());
         },
         style: OutlinedButton.styleFrom(
           padding: EdgeInsets.symmetric(horizontal: 100, vertical: 4),
