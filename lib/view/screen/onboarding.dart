@@ -9,6 +9,8 @@ import 'package:get/utils.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});
+  static String routeName = 'onBoarding';
+
   @override
   Widget build(BuildContext context) {
     Get.put(OnBoardingControllerImp());
