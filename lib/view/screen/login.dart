@@ -54,7 +54,9 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Icon(Icons.arrow_back),
         ),
       ),
-      Center(child: Image.asset(AppAssets.logo)),
+      Center(
+        child: Column(children: [Image.asset(AppAssets.logo, scale: 3.5)]),
+      ),
     ],
   );
 
@@ -98,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
     text: "Log In",
     onClick: () {
       Navigator.of(
-        context
+        context,
       ).push(MaterialPageRoute(builder: (context) => Home()));
     },
   );

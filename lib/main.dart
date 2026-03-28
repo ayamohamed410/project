@@ -8,7 +8,6 @@ import 'package:agin_3/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -21,15 +20,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-        initialRoute: OnBoarding.routeName,
-        routes: {
+      initialRoute: OnBoarding.routeName,
+      routes: {
         OnBoarding.routeName: (context) => OnBoarding(),
-          Home.routeName: (context) => Home(),
-          ForgetPassword.routeName: (context) => ForgetPassword(),
-          VerifyEmail.routeName: (context) => VerifyEmail(),
-          CreateNewPassword.routeName: (context) => CreateNewPassword(),
-          Navigation.routeName: (context) => Navigation(),
-        }
+        Home.routeName: (context) => Home(),
+        ForgetPassword.routeName: (context) => ForgetPassword(),
+        VerifyEmail.routeName: (context) => VerifyEmail(),
+        CreateNewPassword.routeName: (context) => CreateNewPassword(),
+        NavigationScreen.routeName: (context) => NavigationScreen(),
+      },
     );
   }
 }

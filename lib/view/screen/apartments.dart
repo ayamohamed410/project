@@ -43,6 +43,8 @@ class _ApartmentsScreenState extends State<ApartmentsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
+
       body: ListView(
         children: [
           Column(

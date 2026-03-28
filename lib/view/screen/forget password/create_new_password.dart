@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import '../../../constans/colors.dart';
@@ -26,7 +24,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:SafeArea(
+      body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 13),
           child: Column(
@@ -43,46 +41,60 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
               ),
               Row(
                 children: [
-                  Spacer(flex: 1,),
-                  Image.asset('assets/logo.png',scale: 2.5,),
-                  SizedBox(width: 15,),
-                  Text('NearHaven',style: AppStyles.titleStyle,),
-                  Spacer(flex: 1,),
+                  Spacer(flex: 1),
+                  Image.asset('assets/logoBlack.png', scale: 2.5),
+                  SizedBox(width: 15),
+                  Text('NearHaven', style: AppStyles.titleStyle),
+                  Spacer(flex: 1),
                 ],
               ),
-              Spacer(flex: 2,),
+              Spacer(flex: 2),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('Create New Password',style: AppStyles.boldText,),
+                  Text('Create New Password', style: AppStyles.boldText),
                 ],
               ),
-              Spacer(flex: 1,),
+              Spacer(flex: 1),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AppWidgets.stepCircle("1", true, AppColors.primary,context),
+                  AppWidgets.stepCircle("1", true, AppColors.primary, context),
                   AppWidgets.line(context),
-                  AppWidgets.stepCircle("2", true, AppColors.primary,context),
+                  AppWidgets.stepCircle("2", true, AppColors.primary, context),
                   AppWidgets.line(context),
-                  AppWidgets.stepCircle("3", true, AppColors.primary,context),
+                  AppWidgets.stepCircle("3", true, AppColors.primary, context),
                 ],
               ),
-              Spacer(flex: 1,),
-              AppWidgets.passwordField(label: 'New Password*',obscure: newPasswordObscure ,func: (){
-                setState(() {
-                  newPasswordObscure = !newPasswordObscure;
-                });
-              }, context: context),
-              Spacer(flex: 1,),
-              AppWidgets.passwordField(label: 'Re Password*',obscure: rePasswordObscure ,func: (){
-                setState(() {
-                  rePasswordObscure = !rePasswordObscure;
-                });
-              }, context: context),
-              Spacer(flex: 1,),
-              AppWidgets.button(context: context, text: "Reset password", func: (){}),
-              Spacer(flex: 20,),
+              Spacer(flex: 1),
+              AppWidgets.passwordField(
+                label: 'New Password*',
+                obscure: newPasswordObscure,
+                func: () {
+                  setState(() {
+                    newPasswordObscure = !newPasswordObscure;
+                  });
+                },
+                context: context,
+              ),
+              Spacer(flex: 1),
+              AppWidgets.passwordField(
+                label: 'Re Password*',
+                obscure: rePasswordObscure,
+                func: () {
+                  setState(() {
+                    rePasswordObscure = !rePasswordObscure;
+                  });
+                },
+                context: context,
+              ),
+              Spacer(flex: 1),
+              AppWidgets.button(
+                context: context,
+                text: "Reset password",
+                func: () {},
+              ),
+              Spacer(flex: 20),
             ],
           ),
         ),

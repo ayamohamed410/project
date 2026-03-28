@@ -7,16 +7,16 @@ import 'package:flutter/material.dart';
 import 'favorite.dart';
 import 'home.dart';
 
-class Navigation extends StatefulWidget {
-  Navigation({super.key});
+class NavigationScreen extends StatefulWidget {
+  NavigationScreen({super.key});
 
   static String routeName = 'navigation';
 
   @override
-  State<Navigation> createState() => _Navigation();
+  State<NavigationScreen> createState() => _NavigationScreen();
 }
 
-class _Navigation extends State<Navigation> {
+class _NavigationScreen extends State<NavigationScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
