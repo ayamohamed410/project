@@ -5,7 +5,6 @@ import 'package:pinput/pinput.dart';
 import 'colors.dart';
 import 'text_styles.dart';
 
-
 abstract class AppWidgets {
   static Widget stepCircle(String number, bool active, Color color, context) {
     return Container(
@@ -31,10 +30,7 @@ abstract class AppWidgets {
   static Widget line(context) {
     return Container(
       width: MediaQuery.of(context).size.width * .1,
-      child: Divider(
-        color: Colors.black,
-        thickness: 1.5,
-      ),
+      child: Divider(color: Colors.black, thickness: 1.5),
     );
   }
 
@@ -44,10 +40,8 @@ abstract class AppWidgets {
       height: MediaQuery.of(context).size.height * .06, // <-- TextField height
       child: TextField(
         decoration: InputDecoration(
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8)
-            ),
-            labelText: label,
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+          labelText: label,
         ),
       ),
     );
@@ -65,9 +59,7 @@ abstract class AppWidgets {
       child: TextField(
         obscureText: obscure,
         decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
           labelText: label,
           suffixIcon: IconButton(
             icon: Icon(obscure ? Icons.visibility_off : Icons.visibility),
@@ -89,20 +81,14 @@ abstract class AppWidgets {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primary,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           elevation: 0,
         ),
         onPressed: func,
-        child: Text(
-          text,
-          style:  AppStyles.buttonText,
-        ),
+        child: Text(text, style: AppStyles.buttonText),
       ),
     );
   }
-
 
   static Widget pin(context) {
     final Color borderColor = AppColors.primary;
@@ -121,7 +107,8 @@ abstract class AppWidgets {
     );
     return Pinput(
       length: 4,
-      separatorBuilder: (index) => SizedBox(width: MediaQuery.of(context).size.width * .08),
+      separatorBuilder: (index) =>
+          SizedBox(width: MediaQuery.of(context).size.width * .08),
       defaultPinTheme: defaultPinTheme,
       focusedPinTheme: defaultPinTheme.copyWith(
         decoration: BoxDecoration(
@@ -167,15 +154,13 @@ abstract class AppWidgets {
                       style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w600,
-                        color: Colors.white, // لو الخلفية داكنة، غيرها حسب تصميمك
+                        color:
+                            Colors.white, // لو الخلفية داكنة، غيرها حسب تصميمك
                       ),
                     ),
                     const Text(
                       "Welcome",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 22, color: Colors.white),
                     ),
                   ],
                 ),
@@ -214,10 +199,7 @@ abstract class AppWidgets {
         'image': 'assets/image.webp',
         'title': 'The Best Apartment For Your College',
       },
-      {
-        'image': 'assets/image.webp',
-        'title': 'Luxury Studio Near Downtown',
-      },
+      {'image': 'assets/image.webp', 'title': 'Luxury Studio Near Downtown'},
       {
         'image': 'assets/image.webp',
         'title': 'Modern Apartment With Great View',
@@ -248,12 +230,16 @@ abstract class AppWidgets {
                   child: Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 16,bottom: 16,left: 16),
+                        padding: const EdgeInsets.only(
+                          top: 16,
+                          bottom: 16,
+                          left: 16,
+                        ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8),
                           child: Image.asset(
                             offer['image']!,
-                            width: 120,
+                            width: double.infinity,
                             height: 100,
                             fit: BoxFit.cover,
                           ),
@@ -284,7 +270,9 @@ abstract class AppWidgets {
                                       borderRadius: BorderRadius.circular(20),
                                     ),
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 18, vertical: 6),
+                                      horizontal: 18,
+                                      vertical: 6,
+                                    ),
                                   ),
                                   onPressed: () {},
                                   child: Text(
@@ -349,36 +337,52 @@ abstract class AppWidgets {
       width: double.infinity,
       child: Column(
         children: [
-          Image.asset(imagePath,width: double.infinity,height: MediaQuery.of(context).size.height * 0.15,fit: BoxFit.fill),
+          Image.asset(
+            imagePath,
+            width: double.infinity,
+            // height: MediaQuery.of(context).size.height * 0.15,
+            fit: BoxFit.fill,
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Center(child: Text(title,style: AppStyles.titleStyle,)),
+            child: Center(child: Text(title, style: AppStyles.titleStyle)),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.location_on, color: AppColors.primary, size: 25,),
+              Icon(Icons.location_on, color: AppColors.primary, size: 25),
               const SizedBox(width: 4),
-              Text(location,style: AppStyles.buttonText.copyWith(color: AppColors.primary),overflow: TextOverflow.ellipsis,),
+              Text(
+                location,
+                style: AppStyles.buttonText.copyWith(color: AppColors.primary),
+                overflow: TextOverflow.ellipsis,
+              ),
             ],
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Divider(thickness: 1.5,color: Colors.black,),
+            child: Divider(thickness: 1.5, color: Colors.black),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Text(price,style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-              )),
-                Text(oldPrice,style: const TextStyle(
-                  color: Colors.red,
-                  fontSize: 13,
-                  decoration: TextDecoration.lineThrough,
-                ),),
+              children: [
+                Text(
+                  price,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                  ),
+                ),
+                Text(
+                  oldPrice,
+                  style: const TextStyle(
+                    color: Colors.red,
+                    fontSize: 13,
+                    decoration: TextDecoration.lineThrough,
+                  ),
+                ),
               ],
             ),
           ),
@@ -389,7 +393,9 @@ abstract class AppWidgets {
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.05,
                   color: AppColors.primary,
-                  child: Center(child: Text('Booking Now',style: AppStyles.buttonText,)),
+                  child: Center(
+                    child: Text('Booking Now', style: AppStyles.buttonText),
+                  ),
                 ),
               ),
               SizedBox(width: MediaQuery.of(context).size.width * 0.01),
@@ -403,7 +409,6 @@ abstract class AppWidgets {
       ),
     );
   }
-
 }
 
 class CustomBottomBar extends StatelessWidget {
@@ -446,11 +451,7 @@ class CustomBottomBar extends StatelessWidget {
                     final icon = _getIcon(index);
                     return GestureDetector(
                       onTap: () => onTabSelected(index),
-                      child: Icon(
-                        icon,
-                        color: Colors.white,
-                        size: 28,
-                      ),
+                      child: Icon(icon, color: Colors.white, size: 28),
                     );
                   }),
                 ),
@@ -522,9 +523,12 @@ class _BottomBarPainter extends CustomPainter {
     path.moveTo(0, 0);
     path.lineTo(notchCenter - 60, 0);
     path.cubicTo(
-      notchCenter - 40, 0,
-      notchCenter - 35, 30,
-      notchCenter - 20, 40,
+      notchCenter - 40,
+      0,
+      notchCenter - 35,
+      30,
+      notchCenter - 20,
+      40,
     );
     path.arcToPoint(
       Offset(notchCenter + 20, 40),
@@ -532,9 +536,12 @@ class _BottomBarPainter extends CustomPainter {
       clockwise: false,
     );
     path.cubicTo(
-      notchCenter + 35, 30,
-      notchCenter + 40, 0,
-      notchCenter + 60, 0,
+      notchCenter + 35,
+      30,
+      notchCenter + 40,
+      0,
+      notchCenter + 60,
+      0,
     );
     path.lineTo(size.width, 0);
     path.lineTo(size.width, 90);
@@ -548,7 +555,6 @@ class _BottomBarPainter extends CustomPainter {
   bool shouldRepaint(covariant _BottomBarPainter oldDelegate) =>
       oldDelegate.progress != progress;
 }
-
 
 class RoomCard extends StatelessWidget {
   final String imageUrl;
@@ -593,10 +599,7 @@ class RoomCard extends StatelessWidget {
               children: [
                 const Text(
                   "Lorem ipsum dolor",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 const SizedBox(height: 4),
                 Row(
@@ -606,7 +609,10 @@ class RoomCard extends StatelessWidget {
                     Expanded(
                       child: Text(
                         location,
-                        style: const TextStyle(color: Colors.grey, fontSize: 13),
+                        style: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 13,
+                        ),
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
@@ -667,8 +673,3 @@ class RoomCard extends StatelessWidget {
     );
   }
 }
-
-
-
-
-

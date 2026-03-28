@@ -1,4 +1,5 @@
 import 'package:agin_3/view/screen/forget%20password/forget_password.dart';
+import 'package:agin_3/view/screen/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -93,5 +94,12 @@ class _LoginScreenState extends State<LoginScreen> {
     ],
   );
 
-  buildLogin() => CustomBotton(text: "Log In", onClick: () {});
+  buildLogin() => CustomBotton(
+    text: "Log In",
+    onClick: () {
+      Navigator.of(
+        context
+      ).push(MaterialPageRoute(builder: (context) => Home()));
+    },
+  );
 }
