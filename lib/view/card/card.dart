@@ -27,13 +27,13 @@ class CardComponent extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(8),
         child: Column(
-          mainAxisSize: MainAxisSize.max,
+          mainAxisSize: MainAxisSize.min,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
               child: Image.asset(
                 image,
-                height: 80,
+                height: 65,
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),
@@ -57,7 +57,7 @@ class CardComponent extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -70,7 +70,7 @@ class CardComponent extends StatelessWidget {
               ],
             ),
 
-            SizedBox(height: 8),
+            SizedBox(height: 6),
             SizedBox(
               width: double.infinity,
               child: MaterialButton(

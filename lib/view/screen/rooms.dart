@@ -1,4 +1,3 @@
-import 'package:agin_3/view/card/card.dart';
 import 'package:flutter/material.dart';
 
 class Rooms extends StatefulWidget {

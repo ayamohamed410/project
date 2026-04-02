@@ -1,4 +1,3 @@
-import 'package:agin_3/background/background.dart';
 import 'package:agin_3/view/screen/forget%20password/create_new_password.dart';
 import 'package:agin_3/view/screen/forget%20password/forget_password.dart';
 import 'package:agin_3/view/screen/forget%20password/verify_email.dart';

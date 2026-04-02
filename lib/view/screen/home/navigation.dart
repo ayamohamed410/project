@@ -8,7 +8,7 @@ import 'favorite.dart';
 import 'home.dart';
 
 class NavigationScreen extends StatefulWidget {
-  NavigationScreen({super.key});
+  const NavigationScreen({super.key});
 
   static String routeName = 'navigation';
 

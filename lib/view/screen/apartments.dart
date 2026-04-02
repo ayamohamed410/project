@@ -122,14 +122,8 @@ class _ApartmentsScreenState extends State<ApartmentsScreen> {
 
                   //Controll for pages
                   ControllebetweenTabs(),
-
-                  //
-                  // SizedBox(height: 5),
-                  //++
                 ],
               ),
-
-              Container(height: 10),
             ],
           ),
         ],

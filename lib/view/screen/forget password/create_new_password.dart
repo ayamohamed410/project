@@ -5,7 +5,7 @@ import '../../../constans/text_styles.dart';
 import '../../../constans/widgets.dart';
 
 class CreateNewPassword extends StatefulWidget {
-  CreateNewPassword({super.key});
+  const CreateNewPassword({super.key});
 
   static String routeName = 'createNewPassword';
 
@@ -39,23 +39,15 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                   ),
                 ),
               ),
-              Row(
-                children: [
-                  Spacer(flex: 1),
-                  Image.asset('assets/logoBlack.png', scale: 2.5),
-                  SizedBox(width: 15),
-                  Text('NearHaven', style: AppStyles.titleStyle),
-                  Spacer(flex: 1),
-                ],
-              ),
-              Spacer(flex: 2),
+              Center(child: Image.asset('images/logoBlack.png', scale: 3.4)),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text('Create New Password', style: AppStyles.boldText),
                 ],
               ),
-              Spacer(flex: 1),
+              Spacer(flex: 2),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

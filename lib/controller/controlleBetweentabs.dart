@@ -74,7 +74,7 @@ class _ControllebetweenTabsState extends State<ControllebetweenTabs> {
                   Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 11),
+                        padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Container(
                           decoration: BoxDecoration(
                             color: Color(0xffCFD7DA),
@@ -118,7 +118,7 @@ class _ControllebetweenTabsState extends State<ControllebetweenTabs> {
                       ),
                       SizedBox(height: 6),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        padding: EdgeInsets.symmetric(horizontal: 8),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
 
@@ -182,7 +182,7 @@ class _ControllebetweenTabsState extends State<ControllebetweenTabs> {
                     crossAxisCount: 2,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
-                    childAspectRatio: 0.7,
+                    childAspectRatio: 0.65,
                   ),
                   //يعنى كل صف فيه عنصران
                   itemBuilder: (context, index) {
@@ -202,9 +202,7 @@ class _ControllebetweenTabsState extends State<ControllebetweenTabs> {
 
                 ////***************************is name Rooms   نهاية ثاني تاب *******************
                 ////***************************is name check   بداية ثالث تاب *******************
-                Column(
-                  children: [CheckTab()],
-                ),
+                Column(children: [CheckTab()]),
 
                 ////***************************is name check   نهاية ثالث تاب *******************
               ],

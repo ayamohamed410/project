@@ -28,7 +28,7 @@ abstract class AppWidgets {
   }
 
   static Widget line(context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * .1,
       child: Divider(color: Colors.black, thickness: 1.5),
     );
@@ -130,7 +130,7 @@ abstract class AppWidgets {
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Container(
+      child: SizedBox(
         height: MediaQuery.of(context).size.height * .07,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -334,7 +334,7 @@ abstract class AppWidgets {
     required String price,
     required String oldPrice,
   }) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height * 0.3,
       width: double.infinity,
       child: Column(

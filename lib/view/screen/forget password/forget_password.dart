@@ -29,18 +29,14 @@ class ForgetPassword extends StatelessWidget {
                   ),
                 ),
               ),
-              Row(
-                children: [
-                  Spacer(flex: 1),
-                  Image.asset('images/logoBlack.png', scale: 2.7),
-                ],
-              ),
+              Center(child: Image.asset('images/logoBlack.png', scale: 3.4)),
+
               Spacer(flex: 2),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [Text('Forget Password', style: AppStyles.boldText)],
               ),
-              Spacer(flex: 1),
+              Spacer(flex: 2),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
