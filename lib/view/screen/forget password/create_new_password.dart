@@ -39,15 +39,15 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                   ),
                 ),
               ),
-              Center(child: Image.asset('images/logoBlack.png', scale: 3.4)),
-
+              Center(child: Image.asset('images/logoBlack.png', scale: 2.1)),
+              SizedBox(height: 12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text('Create New Password', style: AppStyles.boldText),
                 ],
               ),
-              Spacer(flex: 2),
+              Spacer(flex: 1),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

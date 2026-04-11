@@ -3,6 +3,7 @@ import 'package:agin_3/controller/controlleBetweentabs.dart';
 import 'package:agin_3/view/card/card.dart';
 import 'package:agin_3/view/screen/apartments.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -131,32 +132,122 @@ class Home extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
 
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children:
-                            List.generate //لو عندى ودجت بكررها اكثر من مره  وتقبل عد مرات التكرار length
-                            (card.length, (index) {
-                              return Padding(
-                                padding: EdgeInsets.all(10),
-                                child: SizedBox(
-                                  width: 200,
-                                  child: CardComponent(
-                                    image: card[index]["image"],
-                                    number_of_individuals:
-                                        card[index]['number_of_individuals'],
-                                    icon: card[index]['icon'],
-                                    price: card[index]["price"],
-                                    beds: card[index]["beds"],
-                                    chair: card[index]["chair"],
-                                    table: card[index]["table"],
-                                  ),
+                    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                    SizedBox(
+                      height: 240,
+                      child: ListView.builder(
+                        shrinkWrap:
+                            true, // الـ shrinkWrap: true بيخلي الـ ListView ياخد طول العناصر الفعلي بدل طول لا نهائي.
+                        physics:
+                            NeverScrollableScrollPhysics(), // عشان Scroll الرئيسي يشتغل
+
+                        scrollDirection: Axis.horizontal,
+                        itemCount: card.length,
+                        itemBuilder: (context, index) {
+                          // child: Material(
+                          //   borderRadius: BorderRadius.circular(16),
+                          //   child: InkWell(
+                          //     //InkWell   بيدينا تاثير الضغط
+                          //     borderRadius: BorderRadius.circular(16),
+                          //     onTap: () {
+                          //       Navigator.of(context).push(
+                          //         MaterialPageRoute(
+                          //           builder: (context) => ApartmentsScreen(),
+                          //         ),
+                          //       );
+                          //     },
+
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 5,
+                            ),
+                            child: SizedBox(
+                              width: 170, // مهم جدًا
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
                                 ),
-                              );
-                            }),
+                                elevation: 4, // gives the card a shadow effect
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                                  children: [
+                                    //  الصورة
+                                    Image.asset(
+                                      "images/home1.jpg",
+                                      width: 160,
+                                      height: 110,
+
+                                      fit: BoxFit.cover,
+                                    ),
+
+                                    SizedBox(height: 8),
+
+                                    //  البيانات
+                                    Padding(
+                                      padding: const EdgeInsets.all(10),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "Near Heavan Apartments",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14,
+                                            ),
+                                          ),
+                                          SizedBox(height: 5),
+
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.location_on,
+                                                size: 13,
+                                                color: Colors.grey,
+                                              ),
+                                              Text(
+                                                "Elmansoura",
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+
+                                          SizedBox(height: 8),
+                                          Row(
+                                            children: [
+                                              Text(
+                                                "4,500",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color(0xff3E4E70),
+                                                ),
+                                              ),
+                                              Text(
+                                                "/month",
+                                                style: TextStyle(
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        },
                       ),
                     ),
 
+                    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                     SizedBox(height: 10),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 12),

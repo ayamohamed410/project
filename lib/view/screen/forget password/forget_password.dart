@@ -29,7 +29,7 @@ class ForgetPassword extends StatelessWidget {
                   ),
                 ),
               ),
-              Center(child: Image.asset('images/logoBlack.png', scale: 3.4)),
+              Center(child: Image.asset('images/logoBlack.png', scale: 2.1)),
 
               Spacer(flex: 2),
               Row(

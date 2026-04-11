@@ -322,8 +322,6 @@ abstract class AppWidgets {
         );
       },
     );
-
-
   }
 
   static Widget card({

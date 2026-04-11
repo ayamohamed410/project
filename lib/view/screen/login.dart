@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Stack buildAppLogo() => Stack(
     children: [
       Center(
-        child: Column(children: [Image.asset(AppAssets.logo, scale: 3.5)]),
+        child: Column(children: [Image.asset(AppAssets.logo, scale: 2.2)]),
       ),
     ],
   );

@@ -29,9 +29,9 @@ class VerifyEmail extends StatelessWidget {
                   ),
                 ),
               ),
-              
-              Center(child: Image.asset('images/logoBlack.png', scale: 3.4)),
-            
+
+              Center(child: Image.asset('images/logoBlack.png', scale: 2.1)),
+              SizedBox(height: 12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
