@@ -1,8 +1,8 @@
 import 'package:agin_3/constans/colors.dart';
+import 'package:agin_3/view/screen/home/signup_screen.dart';
 import 'package:agin_3/view/screen/login.dart';
 import 'package:agin_3/view/widget/onboarding/custom_button.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter/material.dart';SignupScreen
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});
@@ -110,7 +110,9 @@ class OnBoarding extends StatelessWidget {
                         borderRadius: (20),
                         heightNum: 0.6,
                         borderSide: BorderSide(color: AppColors.primary),
-                        onClick: () {},
+                        onClick: () {
+                          Get.to(() => SignupScreen());
+                        },
                       ),
                     ),
                   ],
