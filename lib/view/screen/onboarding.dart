@@ -2,7 +2,8 @@ import 'package:agin_3/constans/colors.dart';
 import 'package:agin_3/view/screen/home/signup_screen.dart';
 import 'package:agin_3/view/screen/login.dart';
 import 'package:agin_3/view/widget/onboarding/custom_button.dart';
-import 'package:flutter/material.dart';SignupScreen
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});
