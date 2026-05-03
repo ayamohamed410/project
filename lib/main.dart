@@ -3,6 +3,7 @@ import 'package:agin_3/view/screen/forget%20password/forget_password.dart';
 import 'package:agin_3/view/screen/forget%20password/verify_email.dart';
 import 'package:agin_3/view/screen/home/home.dart';
 import 'package:agin_3/view/screen/home/navigation.dart';
+import 'package:agin_3/view/screen/login.dart';
 import 'package:agin_3/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         OnBoarding.routeName: (context) => OnBoarding(),
         Home.routeName: (context) => Home(),
+        LoginScreen.routeName: (context) => LoginScreen(),
         ForgetPassword.routeName: (context) => ForgetPassword(),
         VerifyEmail.routeName: (context) => VerifyEmail(),
         CreateNewPassword.routeName: (context) => CreateNewPassword(),

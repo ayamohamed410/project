@@ -10,9 +10,12 @@ import 'package:agin_3/background/custom_textfield.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
+static String routeName = 'login';
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
+
 
 class _LoginScreenState extends State<LoginScreen> {
   @override

@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pinput/pinput.dart';
 
 import 'colors.dart';
@@ -672,4 +673,13 @@ class RoomCard extends StatelessWidget {
       ),
     );
   }
+//   void handleTap(PointerDownEvent pointerDownEvent) {
+//     // Get input focus
+//     _keyboardFocusNode.requestFocus(); // Works fine
+
+//     print("In callback"); // Prints fine
+
+//     // Bring up keyboard 
+//     SystemChannels.textInput.invokeMethod('TextInput.show'); // Nothing happens
+// }
 }

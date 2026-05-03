@@ -1,9 +1,9 @@
+import 'package:agin_3/constans/widgets.dart';
 import 'package:agin_3/view/screen/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:agin_3/background/app_assets.dart';
-import 'package:agin_3/background/background.dart';
 import 'package:agin_3/background/app_routes.dart';
 import 'package:agin_3/view/widget/onboarding/custom_button.dart';
 import 'package:agin_3/background/custom_textfield.dart';
@@ -43,7 +43,13 @@ class _SignupScreenState extends State<SignupScreen> {
                 SizedBox(height: 16),
                 buildLogin(),
                 SizedBox(height: 18),
-                buidSignup(),
+                AppWidgets.button(
+                  context: context,
+                  text: "Sign up",
+                  func: () {
+                    Navigator.pushNamed(context, LoginScreen.routeName);
+                  },
+                ),
                 SizedBox(height: 24),
                 buildOr(),
                 SizedBox(height: 16),
@@ -56,7 +62,7 @@ class _SignupScreenState extends State<SignupScreen> {
     );
   }
 
-  buildAppLogo() => Image.asset(AppAssets.logo);
+  buildAppLogo() => Image.asset(AppAssets.logo, width: 118, height: 100);
 
   buildsignUpText() => Row(
     children: [
@@ -123,11 +129,11 @@ class _SignupScreenState extends State<SignupScreen> {
     mainAxisAlignment: MainAxisAlignment.center,
 
     children: [
-      Image.asset(AppAssets.icGoogle),
+      Image.asset(AppAssets.icGoogle, scale: 2),
       SizedBox(width: 14),
-      Image.asset(AppAssets.icApple),
+      Image.asset(AppAssets.icApple, scale: 2),
       SizedBox(width: 14),
-      Image.asset(AppAssets.icFacebook),
+      Image.asset(AppAssets.icFacebook, scale: 2),
 
       // Icon(Icons.),
     ],
