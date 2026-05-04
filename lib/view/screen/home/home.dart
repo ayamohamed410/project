@@ -1,9 +1,7 @@
 import 'package:agin_3/constans/colors.dart';
 import 'package:agin_3/controller/controlleBetweentabs.dart';
-import 'package:agin_3/view/card/card.dart';
 import 'package:agin_3/view/screen/apartments.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

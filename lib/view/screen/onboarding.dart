@@ -55,7 +55,7 @@ class OnBoarding extends StatelessWidget {
               child: Container(
                 height:
                     MediaQuery.of(context).size.height *
-                    0.42, // بيخليه يعتمد على حجم الشاشة (مش رقم ثابت)
+                    0.43, // بيخليه يعتمد على حجم الشاشة (مش رقم ثابت)
                 width: double.infinity,
                 color: Colors.white,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 21.5),
