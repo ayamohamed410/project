@@ -3,6 +3,7 @@ import 'package:agin_3/view/screen/forget%20password/forget_password.dart';
 import 'package:agin_3/view/screen/forget%20password/verify_email.dart';
 import 'package:agin_3/view/screen/home/home.dart';
 import 'package:agin_3/view/screen/home/navigation.dart';
+import 'package:agin_3/view/screen/home/notifications/notification_page.dart';
 import 'package:agin_3/view/screen/login.dart';
 import 'package:agin_3/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: OnBoarding.routeName,
+      initialRoute: NavigationScreen.routeName,
       routes: {
         OnBoarding.routeName: (context) => OnBoarding(),
         Home.routeName: (context) => Home(),
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         VerifyEmail.routeName: (context) => VerifyEmail(),
         CreateNewPassword.routeName: (context) => CreateNewPassword(),
         NavigationScreen.routeName: (context) => NavigationScreen(),
+        NotificationPage.routeName: (context) => NotificationPage(),
       },
     );
   }

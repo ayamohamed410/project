@@ -1,5 +1,7 @@
 import 'package:agin_3/constans/colors.dart';
+import 'package:agin_3/view/screen/home/notifications/notification_page.dart';
 import 'package:agin_3/view/screen/home/profile.dart';
+import 'package:agin_3/view/screen/home/profile/profile_page.dart';
 import 'package:agin_3/view/screen/home/search.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +24,8 @@ class _NavigationScreen extends State<NavigationScreen> {
   final List<Widget> _pages = [
     Home(),
     Favorite(),
-    Search(),
-    Profile(),
+    NotificationPage(),
+    ProfilePage(),
   ];
 
   @override
@@ -35,14 +37,15 @@ class _NavigationScreen extends State<NavigationScreen> {
         children: _pages,
       ),
       bottomNavigationBar: CurvedNavigationBar(
+        height: 50,
         color: AppColors.primary,
         backgroundColor: Colors.transparent,
         buttonBackgroundColor: AppColors.primary,
         items: const <Widget>[
-          Icon(Icons.home_rounded, size: 30, color: Colors.white),
-          Icon(Icons.favorite_border, size: 30, color: Colors.white),
-          Icon(Icons.search, size: 30, color: Colors.white),
-          Icon(Icons.person, size: 30, color: Colors.white),
+          Icon(Icons.home_outlined, size: 30, color: Colors.white),
+          Icon(Icons.bookmark_border_outlined, size: 30, color: Colors.white),
+          Icon(Icons.notifications_none_outlined, size: 30, color: Colors.white),
+          Icon(Icons.person_outline, size: 30, color: Colors.white),
         ],
         onTap: (index) {
           setState(() {

@@ -124,40 +124,6 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ],
       ),
-      bottomNavigationBar: CustomBottomBar(
-        currentIndex: 3,
-        onTabSelected: (index) {
-          if (index == 3) {
-            // Already on Profile tab.
-            return;
-          }
-
-          switch (index) {
-            case 0:
-              // Home icon => open placeholder "Home" screen
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (_) =>
-                      const PlaceholderPage(tabIndex: 0, title: 'Home'),
-                ),
-              );
-              break;
-            case 1:
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (_) =>
-                      const PlaceholderPage(tabIndex: 1, title: 'Calendar'),
-                ),
-              );
-              break;
-            case 2:
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (_) => const NotificationPage()),
-              );
-              break;
-          }
-        },
-      ),
     );
   }
 

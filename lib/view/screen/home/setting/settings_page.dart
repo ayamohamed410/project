@@ -48,43 +48,6 @@ class SettingsPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: CustomBottomBar(
-        currentIndex: 3,
-        onTabSelected: (index) {
-          if (index == 3) {
-            // Already on Profile-related screen (Settings), go back to Profile
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (_) => const ProfilePage()),
-            );
-            return;
-          }
-
-          switch (index) {
-            case 0:
-              // Home icon opens placeholder "Home" screen
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (_) =>
-                      const PlaceholderPage(tabIndex: 0, title: 'Home'),
-                ),
-              );
-              break;
-            case 1:
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (_) =>
-                      const PlaceholderPage(tabIndex: 1, title: 'Calendar'),
-                ),
-              );
-              break;
-            case 2:
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (_) => const NotificationPage()),
-              );
-              break;
-          }
-        },
-      ),
     );
   }
 

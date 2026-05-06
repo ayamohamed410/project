@@ -7,6 +7,7 @@ class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
 
   static const Color _backgroundColor = Color(0xFFF7F7F7);
+  static const String routeName = 'notification';
 
   static const List<_NotificationSectionData> _sections = [
     _NotificationSectionData(
@@ -115,10 +116,6 @@ class NotificationPage extends StatelessWidget {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: CustomBottomBar(
-        currentIndex: 2,
-        onTabSelected: (index) => _onNavTap(context, index),
       ),
     );
   }

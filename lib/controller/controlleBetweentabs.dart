@@ -56,7 +56,7 @@ final List card = [
 class _ControllebetweenTabsState extends State<ControllebetweenTabs> {
   static const double _mapLat = 29.934221;
   static const double _mapLng = 31.1966446;
-  static const gmaps.LatLng _pyramidsLocation = gmaps.LatLng(_mapLat, _mapLng);
+  static const gmaps.LatLng location = gmaps.LatLng(_mapLat, _mapLng);
 
   final MapController _osmMapController = MapController();
   gmaps.GoogleMapController? _googleMapController;
@@ -64,7 +64,7 @@ class _ControllebetweenTabsState extends State<ControllebetweenTabs> {
   final Set<gmaps.Marker> _mapMarkers = {
     gmaps.Marker(
       markerId: gmaps.MarkerId('marker'),
-      position: _pyramidsLocation,
+      position: location,
       infoWindow: gmaps.InfoWindow(
         title: 'location',
       ),
@@ -155,7 +155,7 @@ class _ControllebetweenTabsState extends State<ControllebetweenTabs> {
       children: [
         gmaps.GoogleMap(
           initialCameraPosition: const gmaps.CameraPosition(
-            target: _pyramidsLocation,
+            target: location,
             zoom: 14,
           ),
           onMapCreated: (c) => _googleMapController = c,
